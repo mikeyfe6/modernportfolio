@@ -1,8 +1,8 @@
-$primary-color: #444;
-$secondary-color: #C08240;
-$third-color: #FFCC99;
+$primary-color: #EAE6E5;
+$secondary-color: #8F8073;
+$third-color: #9CB7AB;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/worldreal.jpg);
 $background-opacity: 0.8;
 
 @mixin easeOut {
@@ -33,7 +33,7 @@ $background-opacity: 0.8;
 // color text mix
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
-        @return #000;
+        @return #12130F;
     }
 
     @else {
@@ -42,7 +42,6 @@ $background-opacity: 0.8;
 }
 
 // media query mixins
-
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;

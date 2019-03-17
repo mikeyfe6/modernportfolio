@@ -11,7 +11,7 @@ body {
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.5;
 }
 
@@ -34,7 +34,7 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: $third-color;
     text-decoration: none;
 }
 
@@ -46,6 +46,10 @@ header {
 
 .text-secondary {
     color: $secondary-color;
+}
+
+.text-third {
+    color: $third-color;
 }
 
 main {
@@ -75,6 +79,7 @@ main {
     }
 }
 
+// about section
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -88,6 +93,7 @@ main {
         margin: auto;
         border-radius: 50%;
         border: $secondary-color 3px solid;
+        filter: grayscale(80%);
     }
 
     .bio {
