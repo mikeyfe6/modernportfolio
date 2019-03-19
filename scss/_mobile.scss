@@ -3,6 +3,10 @@
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 // desktops & laptops
@@ -48,7 +52,7 @@
         .portrait {
             background: url(../img/portrait_small.jpg);
             width: 120px;
-            height: 150px;
+            height: 120px;
         }
     }
 
@@ -66,17 +70,33 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 // smartphones
 @include mediaSm {
-    main#home h1 {
-        margin-top: 10vh;
-        font-size: 4rem;
+
+    main {
+
+        &#home,
+        &#about,
+        &#work,
+        &#contact {
+            h1 {
+                margin-top: 10vh;
+                font-size: 4rem;
+            }
+        }
     }
 
     .projects {
         grid-template-columns: (1fr);
+    }
+
+    .contact-wrapper {
+        grid-template-areas:
+            'contact-text'
+            'contact-form';
+
+        grid-template-columns: 1fr;
     }
 }

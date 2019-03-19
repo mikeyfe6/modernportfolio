@@ -60,7 +60,7 @@
       border: solid 3px #8F8073;
       filter: grayscale(80%); }
     .menu-branding .portrait-text {
-      font-size: 30px;
+      font-size: 35px;
       padding: 10px 0 0 0;
       text-decoration-line: underline; }
   .menu .nav-item {
@@ -75,17 +75,25 @@
     position: relative;
     font-size: 25px;
     text-transform: uppercase;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     color: #12130F;
     text-decoration: none;
-    transition: 3s all;
+    transition: 0.5s;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #8F8073;
       padding-right: 24px;
       padding-left: 8px; }
       .menu .nav-link:hover:after {
-        content: ">"; }
+        content: "\0394"; }
+  .menu .menu-icons {
+    padding-top: 20px;
+    padding: 0.4rem; }
+    .menu .menu-icons i {
+      padding: 5px; }
+      .menu .menu-icons i:hover {
+        color: #8F8073;
+        transition: all 0.5s ease-out; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -177,7 +185,7 @@ main {
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 40%;
     border: #8F8073 3px solid;
     filter: grayscale(80%); }
   .about-info .bio {
@@ -192,7 +200,10 @@ main {
   .about-info .job {
     background: #f5f4f3;
     padding: 0.5rem;
-    border-bottom: #8F8073 5px solid; }
+    border-bottom: #9CB7AB 5px solid;
+    transition: all .2s ease-in-out; }
+    .about-info .job:hover {
+      transform: scale(1.05); }
 
 .projects {
   display: grid;
@@ -203,25 +214,44 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #8F8073;
+      border-color: #9CB7AB;
       transition: all 0.5s ease-out; }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #9CB7AB;
-      color: #12130F; }
+.contact-wrapper {
+  display: grid;
+  margin-top: 5rem;
+  grid-gap: 30px;
+  grid-template-areas: 'contacttext contactform';
+  grid-template-columns: 1fr 1fr; }
+  .contact-wrapper .contact-informatie {
+    grid-area: contacttext;
+    margin: auto;
+    font-size: 1.2rem; }
+  .contact-wrapper ul li {
+    list-style: none; }
+  .contact-wrapper i {
+    margin: 20px; }
+  .contact-wrapper .contact-formulier {
+    grid-area: contactform; }
+    .contact-wrapper .contact-formulier .form-control {
+      background: transparent;
+      width: 500px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid gray;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: 'Lato', sans-serif; }
+    .contact-wrapper .contact-formulier input {
+      height: 45px; }
+    .contact-wrapper .contact-formulier form .submit {
+      background-color: #9CB7AB;
+      letter-spacing: 2px;
+      font-weight: bold; }
+      .contact-wrapper .contact-formulier form .submit:hover {
+        cursor: pointer;
+        background: #baccc4;
+        transition: all 0.5s ease-out; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -229,8 +259,9 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #8F8073;
-    color: #12130F; }
+    background: #9CB7AB;
+    color: #12130F;
+    transition: all 0.5s ease-out; }
 
 .btn-dark {
   background: #73615d;
@@ -249,7 +280,9 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .contact-wrapper {
+    grid-template-columns: 1fr 1fr; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
@@ -280,7 +313,7 @@ main {
     .menu-branding .portrait {
       background: url(../img/portrait_small.jpg);
       width: 120px;
-      height: 150px; }
+      height: 120px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
@@ -288,8 +321,11 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
+  main#home h1, main#about h1, main#work h1, main#contact h1 {
     margin-top: 10vh;
     font-size: 4rem; }
   .projects {
+    grid-template-columns: 1fr; }
+  .contact-wrapper {
+    grid-template-areas: 'contact-text' 'contact-form';
     grid-template-columns: 1fr; } }

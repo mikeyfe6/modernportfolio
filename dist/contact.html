@@ -24,6 +24,20 @@
             <div class="menu-branding">
                 <div class="portrait"></div>
                 <div class="portrait-text">M<span class="text-third">F</span></div>
+                <div class="menu-icons">
+                    <a href="#!">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
             </div>
 
             <ul class="menu-nav">
@@ -34,17 +48,17 @@
                 </li>
                 <li class="nav-item">
                     <a href="about.html" class="nav-link">
-                        About Me
+                        Over Mij
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="work.html" class="nav-link">
-                        My Work
+                        Portfolio
                     </a>
                 </li>
                 <li class="nav-item current">
                     <a href="contact.html" class="nav-link">
-                        How To Reach Me
+                        Contact
                     </a>
                 </li>
             </ul>
@@ -59,21 +73,26 @@
         <h2 class="sm-heading">
             Hier kan je me contacten..
         </h2>
-
-        <div class="boxes">
-            <div>
-                <span class="text-secondary">Email</span>
-                dev@michaelfransman.me
+        <div class="contact-wrapper">
+            <div class="contact-informatie">
+                <ul>
+                    <li><i class="fas fa-user fa-2x"></i>Naam: Michael Fransman</li>
+                    <li><i class="fas fa-at fa-2x"></i>E-maildres: dev@michaelfransman.me</li>
+                    <li><i class="fas fa-phone fa-2x"></i>Telefoonnummer: 0628213134</li>
+                </ul>
             </div>
 
-            <div>
-                <span class="text-secondary">Phone</span>
-                +31 6 28 213 134
-            </div>
+            <div class="contact-formulier">
+                <form id="contact-formulier" method="post" actions="">
+                    <input name="name" type="text" class="form-control" placeholder="Uw naam" required><br>
 
-            <div>
-                <span class="text-secondary">Adres</span>
-                Karspeldreef 1450-A4
+                    <input name="email" type="text" class="form-control" placeholder="Uw Email" required><br>
+
+                    <textarea name="message" class="form-control" rows="4" placeholder="Bericht" required></textarea><br>
+
+
+                    <input type="submit" class="form-control submit" value="STUUR BERICHT">
+                </form>
             </div>
         </div>
     </main>

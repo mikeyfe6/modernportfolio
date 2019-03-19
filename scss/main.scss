@@ -52,6 +52,7 @@ header {
     color: $third-color;
 }
 
+// home page
 main {
     padding: 4rem;
     // height: 100%; 
@@ -79,7 +80,7 @@ main {
     }
 }
 
-// about section
+// about page
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -91,7 +92,7 @@ main {
     .bio-image {
         grid-area: bioimage;
         margin: auto;
-        border-radius: 50%;
+        border-radius: 40%;
         border: $secondary-color 3px solid;
         filter: grayscale(80%);
     }
@@ -116,11 +117,16 @@ main {
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
+        border-bottom: $third-color 5px solid;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
-// projects
+// project page
 .projects {
     display: grid;
     grid-gap: 0.7rem;
@@ -132,35 +138,65 @@ main {
 
         &:hover {
             opacity: 0.5;
-            border-color: $secondary-color;
+            border-color: $third-color;
             @include easeOut;
         }
     }
 }
 
-// contact
-.boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
+// contact page
+.contact-wrapper {
+    display: grid;
+    margin-top: 5rem;
+    grid-gap: 30px;
+    grid-template-areas:
+        'contacttext contactform';
+    grid-template-columns: 1fr 1fr;
 
-    div {
-        font-size: 2rem;
-        border: 3px #fff solid;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        @include easeOut;
+    .contact-informatie {
+        grid-area: contacttext;
+        margin: auto;
+        font-size: 1.2rem;
+    }
 
-        &:hover {
-            padding: 0.5rem 1.5rem;
-            background: $third-color;
-            color: set-text-color($secondary-color);
+    ul li {
+        list-style: none;
+    }
 
-            // span {
-            //     color: set-text-color($secondary-color);
-            // }
+    i {
+        margin: 20px;
+    }
+
+    .contact-formulier {
+        grid-area: contactform;
+        // margin: auto;
+
+        .form-control {
+            background: transparent;
+            width: 500px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid gray;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        input {
+            height: 45px;
+        }
+
+
+        form .submit {
+            background-color: $third-color;
+            letter-spacing: 2px;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+                background: lighten($third-color, 10);
+                @include easeOut;
+            }
         }
     }
 }
@@ -173,8 +209,9 @@ main {
     margin-bottom: 0.3rem;
 
     &:hover {
-        background: $secondary-color;
+        background: $third-color;
         color: set-text-color($secondary-color);
+        @include easeOut;
     }
 }
 
@@ -190,6 +227,8 @@ main {
     color: #333;
 }
 
+
+// footer
 #main-footer {
     text-align: center;
     padding: 1rem;
