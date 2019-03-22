@@ -3,10 +3,6 @@
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 // desktops & laptops
@@ -93,10 +89,19 @@
     }
 
     .contact-wrapper {
-        grid-template-areas:
-            'contact-text'
-            'contact-form';
+        // font-size: 1rem;
 
-        grid-template-columns: 1fr;
+        ul {
+            margin-bottom: 5rem;
+        }
+
+        .contact-informatie {
+            text-align: left;
+            margin-left: -50px;
+        }
+
+        .form-control {
+            max-width: 300px;
+        }
     }
 }
